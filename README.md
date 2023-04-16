@@ -58,10 +58,20 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Deployment
+
+```bash
+# Generate artifact
+$ npm run build
+
+# Execute in production mode
+$ npm run start:prod
+
+```
+
 ## Populate Db
 
 ```
-# unit tests
 http://localhost:3000/seed
 ```
 
