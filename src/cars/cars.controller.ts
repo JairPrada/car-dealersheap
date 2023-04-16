@@ -24,8 +24,8 @@ export class CarsController {
     @Body() updateCar: updateCarDto) {
     return this.carsService.updateCarDto(id, updateCar);
   }
-  @Delete()
-  deleteCar(@Body() Body: any) {
-    return "Car deleted";
+  @Delete(":id")
+  deleteCar(@Param('id', new ParseUUIDPipe({ version: '4' })) id) {
+    return this.carsService.deleteCar(id);
   }
 }
